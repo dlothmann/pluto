@@ -1,39 +1,61 @@
 import socket
-import time
-
+import sys
+import threading
+import queue
 #CONFIG
 
 #IP
 IP = '192.168.0.136'
 #Port
-PORT = 22
+startPort = 0
+endPort = 65534
+maxPort = 65535
+
+#diff = endPort - startPort
+
+q = queue.Queue
+
+def check(p):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = s.connect_ex((IP, p))
+    if result == 0:
+        print ("Port {} || Open".format(p))
+    else:
+        print ("Port {} || Close".format(p))
 
 
+#threads = diff/4
 
-
-ctimes = 5
-i = 0
-connect = ""
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-e = None
+threads = []
 try:
-    s.connect((IP, PORT))
+    if endPort < maxPort  and startPort >= 0:
 
-    while i < ctimes:
-        if s.send("test".encode()):
-            connect = "yay"
+            
+        for port in range(startPort,endPort+1):
 
-        else:
-            connect = "doof"
-    i += 1
-except socket.error as e:
-    if e != None:
-        connect = "FAIL"
+            process = threading.Thread(target=check,name=port,args=[port])
+            process.start()
+            threads.append(process)
+            
+            #process.join()
+        for process in threads:
+            process.join()
+                
+    else:
+        print("Kein gültiger Port")
+        s.close()
 
+    
+except KeyboardInterrupt:
+    print ("You pressed Ctrl+C")
+    sys.exit()
 
+except socket.gaierror:
+    print ('Hostname could not be resolved. Exiting')
+    sys.exit()
 
-#time.sleep(10)
-s.close()
+except socket.error:
+    print ("Couldn't connect to server")
+    sys.exit()
 
-print(connect)
+#s.close()
