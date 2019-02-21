@@ -1,4 +1,4 @@
-# pluto
+# Pluto Port Scanner
 Simple port scanner written in Python.
 
 Usage:
