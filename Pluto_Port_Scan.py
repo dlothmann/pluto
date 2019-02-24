@@ -140,7 +140,6 @@ try:
                
     else:
         print("Port not in Range 0 - 65535")
-        s.close()
         sys.exit()
 
     
