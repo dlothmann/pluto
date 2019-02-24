@@ -2,6 +2,22 @@
 #Python 3 File
 #
 
+# BSD 3-Clause License
+# Copyright (c) 2019, Dominik Lothmann All rights reserved.
+# Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+# Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+# Redistributions in binary form must reproduce the above copyright notice, this list of conditions and 
+# the following disclaimer in the documentation and/or other materials provided with the distribution.
+# Neither the name of the copyright holder nor the names of its contributors may be used to endorse or 
+# promote products derived from this software without specific prior written permission.
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+# BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, 
+# OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 import socket
 import sys
 import threading
@@ -13,23 +29,6 @@ import argparse
 #Project Pluto
 #
 
-# ____    ___             __
-#/\  _`\ /\_ \           /\ \__
-#\ \ \L\ \//\ \    __  __\ \ ,_\   ___
-# \ \ ,__/ \ \ \  /\ \/\ \\ \ \/  / __`\
-#  \ \ \/   \_\ \_\ \ \_\ \\ \ \_/\ \L\ \
-#   \ \_\   /\____\\ \____/ \ \__\ \____/
-#    \/_/   \/____/ \/___/   \/__/\/___/
-
-
-# print(' ____    ___             __')
-# print('/\  _`\ /\_ \           /\ \__')
-# print('\ \ \L\ \//\ \    __  __\ \ ,_\   ___')
-# print(' \ \ ,__/ \ \ \  /\ \/\ \\ \ \/  / __`\\')
-# print('  \ \ \/   \_\ \_\ \ \_\ \\ \ \_/\ \L\ \\')
-# print('   \ \_\   /\____\\ \____/ \ \__\ \____/')
-# print('    \/_/   \/____/ \/___/   \/__/\/___/')
-
 print(' _____  _       _          _____           _      _____')
 print('|  __ \| |     | |        |  __ \         | |    / ____|')
 print('| |__) | |_   _| |_ ___   | |__) |__  _ __| |_  | (___   ___ __ _ _ __')
@@ -37,7 +36,6 @@ print('|  ___/| | | | | __/ _ \  |  ___/ _ \| \'__| __| \___ \ / __/  _` | \'_ \
 print('| |    | | |_| | || (_) | | |  | (_) | |  | |_   ____) | (_| (_| | | | |')
 print('|_|    |_|\__,_|\__\___/  |_|   \___/|_|   \__| |_____/ \___\__,_|_| |_|')
 
-print()
 print()
 print()
 
@@ -137,7 +135,7 @@ try:
             sys.exit()
 
 
-               
+    #Port not in Range               
     else:
         print("Port not in Range 0 - 65535")
         sys.exit()
