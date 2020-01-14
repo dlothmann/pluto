@@ -1,11 +1,37 @@
 # Pluto Port Scanner
-Simple port scanner written in Python.
 
-Usage:
-$# portscan.py -H -p1
+Pluto Port Scanner is a Python tool for scanning tcp ports.
 
-Other Arguments:
--H/--Host ->    Host Adress you would scan
--p1/--port1 ->  From Port. When only this is given you scan only this port.
--p2/--port2 ->  To Port
--a/--all ->     Shows closed AND open Ports.')
+## Installation
+
+Clone the repo to your computer 
+
+```git
+git clone https://github.com/dlothmann/pluto.git
+```
+
+## Usage
+
+```bash
+portscan.py -H <ADDRESS> -p1 <PORT>
+
+```
+Other Arguments
+
+````bash
+-H  | Host Address or IP Address
+-p1 | When only one port than port you would scan otherwise Startport of the range
+````
+Optinal
+````bash
+-p2 | End Portrange
+-a  | Show closed and open ports
+````
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[BSD 3 Clause Clear](https://choosealicense.com/licenses/bsd-3-clause-clear/)
