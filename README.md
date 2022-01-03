@@ -1,5 +1,7 @@
 # Pluto Port Scanner
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/35cb96c3e9fa4bf9938a95f057dc68de)](https://www.codacy.com/gh/dlothmann/pluto/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dlothmann/pluto&amp;utm_campaign=Badge_Grade)
+
 Pluto Port Scanner is a Python tool for scanning tcp ports.
 
 ## Installation
